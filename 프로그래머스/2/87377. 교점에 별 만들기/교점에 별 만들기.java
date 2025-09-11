@@ -24,7 +24,7 @@ class Solution {
     }
 
     // Solution 함수
-    public   String[] solution(int[][] line) {
+    public String[] solution(int[][] line) {
 
         // 1. 유효한 접점들을 담을 리스트
         List<Point> points = new ArrayList<>();
@@ -90,15 +90,16 @@ class Solution {
 
     // ---------------- 테스트용 main ----------------
 
-//     public static void main(String[] args) {
-//         Solution solution = new Solution();
-//         int[][] input = { { 2, -1, 4 }, { -2, -1, 4 }, { 0, -1, 1 }, { 5, -8, -12 }, { 5, 8, 12 } };
+    // public static void main(String[] args) {
+    // Solution solution = new Solution();
+    // int[][] input = { { 2, -1, 4 }, { -2, -1, 4 }, { 0, -1, 1 }, { 5, -8, -12 },
+    // { 5, 8, 12 } };
 
-//         String[] result = solution.solution(input);
+    // String[] result = solution.solution(input);
 
-//         // for (String line : result) {
-//         //     System.out.println(line);
-//         // }
+    // // for (String line : result) {
+    // // System.out.println(line);
+    // // }
 
-//     }
+    // }
 }

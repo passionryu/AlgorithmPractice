@@ -46,6 +46,7 @@ public class BFSExample2 {
             int node = q.poll();
             System.out.print(node + " ");
 
+            // 그래프 안에 있는 Value를 next에 대입
             for (int next : graph[node]) {
                 if (!visited[next]) {
                     visited[next] = true;
@@ -53,5 +54,24 @@ public class BFSExample2 {
                 }
             }
         }
+
+        int[] dist = new int[n + 1];
+        Arrays.fill(dist, -1); // 방문 안된 노드: -1
+        Queue<Integer> q1 = new LinkedList<>();
+        q1.add(1);
+        dist[1] = 0;
+
+        while (!q1.isEmpty()) {
+            int node = q1.poll();
+            for (int next : graph[node]) {
+                if (dist[next] == -1) {
+                    dist[next] = dist[node] + 1;
+                    q1.add(next);
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(dist));
+
     }
 }
